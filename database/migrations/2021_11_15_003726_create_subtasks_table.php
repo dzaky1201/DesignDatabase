@@ -15,10 +15,10 @@ class CreateSubtasksTable extends Migration
     {
         Schema::create('subtasks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('task_id')->constrained();
             $table->string('name');
             $table->boolean('is_complete')->default(false);
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
+            $table->timestamps();
         });
     }
 

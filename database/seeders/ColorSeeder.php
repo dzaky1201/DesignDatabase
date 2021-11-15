@@ -20,11 +20,6 @@ class ColorSeeder extends Seeder
                 "name" => "Red",
                 "created_at" => Date::now()->format('Y-m-d H:i:s'),
                 "updated_at" => Date::now()->format('Y-m-d H:i:s')
-            ],
-            [
-                "name" => "Blue",
-                "created_at" => Date::now()->format('Y-m-d H:i:s'),
-                "updated_at" => Date::now()->format('Y-m-d H:i:s')
             ]
         ]);
     }

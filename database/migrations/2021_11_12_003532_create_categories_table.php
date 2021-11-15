@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignIdSubtasks extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddForeignIdSubtasks extends Migration
      */
     public function up()
     {
-        Schema::table('subtasks', function (Blueprint $table) {
-            $table->foreignId('task_id')->references('id')->on('tasks');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddForeignIdSubtasks extends Migration
      */
     public function down()
     {
-        Schema::table('subtasks', function (Blueprint $table) {
-            $table->dropForeign('task_id');
-        });
+        Schema::dropIfExists('categories');
     }
 }

@@ -17,14 +17,8 @@ class TaskCategorySeeder extends Seeder
     {
         DB::table('task_categories')->insert([
             [
-                "task_id" => 1,
-                "category_id" => 1,
-                "created_at" => Date::now()->format('Y-m-d H:i:s'),
-                "updated_at" => Date::now()->format('Y-m-d H:i:s')
-            ],
-            [
                 "task_id" => 2,
-                "category_id" => 3,
+                "category_id" => 1,
                 "created_at" => Date::now()->format('Y-m-d H:i:s'),
                 "updated_at" => Date::now()->format('Y-m-d H:i:s')
             ]

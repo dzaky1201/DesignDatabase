@@ -20,16 +20,6 @@ class CategorySeeder extends Seeder
                 "name" => "Red Category",
                 "created_at" => Date::now()->format('Y-m-d H:i:s'),
                 "updated_at" => Date::now()->format('Y-m-d H:i:s')
-            ],
-            [
-                "name" => "Blue Category",
-                "created_at" => Date::now()->format('Y-m-d H:i:s'),
-                "updated_at" => Date::now()->format('Y-m-d H:i:s')
-            ],
-            [
-                "name" => "Green Category",
-                "created_at" => Date::now()->format('Y-m-d H:i:s'),
-                "updated_at" => Date::now()->format('Y-m-d H:i:s')
             ]
         );
     }

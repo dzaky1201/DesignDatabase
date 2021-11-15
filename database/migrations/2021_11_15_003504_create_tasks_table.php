@@ -15,6 +15,8 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('list_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->string('name');
             $table->dateTime('reminder_datetime');
             $table->date('due_date');
@@ -22,8 +24,7 @@ class CreateTasksTable extends Migration
             $table->text('note');
             $table->boolean('is_complete')->default(false);
             $table->boolean('is_my_day')->default(false);
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
+            $table->timestamps();
         });
     }
 

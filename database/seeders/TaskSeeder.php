@@ -17,21 +17,9 @@ class TaskSeeder extends Seeder
     {
         DB::table('tasks')->insert([
             [
-                "list_id" => 1,
+                "list_id" => 3,
                 "user_id" => 1,
                 "name" => "Ini adalah catatan saya kegiatan di idn",
-                "reminder_datetime" => Date::now()->addDays(rand(0, 365)),
-                "due_date" => Date::now()->addDays(rand(0, 365)),
-                "attachment_url" => "https://google.com",
-                "note" => "Besok selesai",
-                "created_at" => Date::now()->format('Y-m-d H:i:s'),
-                "updated_at" => Date::now()->format('Y-m-d H:i:s')
-            ],
-
-            [
-                "list_id" => 2,
-                "user_id" => 1,
-                "name" => "Ini adalah catatan saya kegiatan di Yaumi",
                 "reminder_datetime" => Date::now()->addDays(rand(0, 365)),
                 "due_date" => Date::now()->addDays(rand(0, 365)),
                 "attachment_url" => "https://google.com",
